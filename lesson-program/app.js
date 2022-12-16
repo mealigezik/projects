@@ -1,8 +1,5 @@
 const day = prompt("Enter the day");
-
-
 let lesson = 0;
-
 switch (day) {
     case "monday":
         lesson = "inclass";
@@ -30,4 +27,3 @@ switch (day) {
         break;
 }
 console.log(`${day} you have ${lesson}`);
-    
