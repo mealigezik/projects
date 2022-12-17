@@ -13,8 +13,7 @@
     font-size: 13px;
 }
 .nav{
-    /* background-color: greenyellow; */
-    width: 100%;
+    width: 99.9%;
     height: 2rem;
     position:fixed;
     display: flex;
@@ -22,7 +21,6 @@
     justify-content: space-between;
     padding: 1.4rem 1rem;
     text-decoration-color: black;
-    /* text-decoration: none solid rgb(255, 255, 255); */
 }
 .nav-left{
     width: 10%;
@@ -37,7 +35,6 @@
     width: 108px;
 }
 .nav-right{
-    /* background-color: olive; */
     width: 248px;
     display: flex;
     align-items: center;
@@ -62,7 +59,6 @@
     cursor: pointer;
 }
 .main{
-    /* background-color: orange; */
     position: relative;
     top: 14rem;
     align-items: center;
@@ -84,7 +80,6 @@
     margin: 0 20%;
 }
 .search-area{
-    /* background-color: red; */
     width: 560px;
     height: 3rem;
     min-width: auto;
@@ -97,7 +92,6 @@
     padding: 0 1rem;
 }
 .major {
-    /* background-color: aqua; */
     width: 487px;
     height: 34px;
     /* margin: -37px 0 0 0; */
@@ -133,14 +127,13 @@ p a{
     color: #000080;
 }
 footer{
-    /* height: 15.5rem; */
-    position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 13px;
     color:  #5F6368;
     vertical-align: auto;
     background-color:  #F2F2F2;
+    position: fixed;
 }
 .turkey{
     height: 2.5rem;
