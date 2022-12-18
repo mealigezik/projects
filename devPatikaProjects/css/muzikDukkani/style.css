@@ -19,15 +19,6 @@ h2{
     color: blueviolet;
     /* margin: 30px 0; */
 }
-ol{
-    /* position: fixed; */
-    /* left: 0px; */
-    /* top: 0px; */
-    background-color: blue;
-    
-
-
-}
 .nav{
     width: 100px;
     display: inline-block;
@@ -48,7 +39,7 @@ h4{
 .urun{
     width: 300px;
     margin: 0 auto;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     /* height: 19800px; */
 }
 img{
