@@ -11,8 +11,6 @@ body{
 
     text-align: center;
 }
-.c2{
-}
 .ms{
     width: 303px;
     padding: 1px 2px;
@@ -29,7 +27,6 @@ button{
     text-align: center;
 }
 .c221{
-    height: ;
     font-size: 1rem;
     background-color: #7EE5DA;
     float: left;
@@ -39,7 +36,7 @@ button{
 .c222{
     /* height: 74.4px; */
     background-color: #70CCC2;
-    width: 19.6%;
+    width: 19.65%;
     font-size: 13px;
     float: left;
     /* text-align: center; */
