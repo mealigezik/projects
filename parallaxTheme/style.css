@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: lato, sans-serif;
+    text-align: center;
+    opacity: 0.7;
+}
+.bgs{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: 50% 50%;
+}
+
+.bg-container-img1, .bg-container-img2, .bg-container-img3, .bg-container-img4{
+    
+    width: 100%;
+    
+}
+.bg-container-img1{
+    background-image: url(./img/bg.jpg);
+    min-height: 100vh;
+}
+.bg-container-img2{
+    background-image: url(./img/bg2.jpg);
+    min-height: 80vh;
+}
+.bg-container-img3{
+    background-image: url(./img/bg3.jpg);
+    min-height: 80vh;
+}
+.bg-container-img4{
+    background-image: url(./img/bg4.jpg);
+    min-height: 80vh;
+}
+.bg-container-img5{
+    background-image: url(./img/bg.jpg);
+    min-height: 100vh;
+}
+
+section{
+    line-height: 1.8rem;
+    padding: 3rem 5rem;
+}
+h2{
+    
+    margin: 20px;
+}
+.heading-container-heading-big{
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    color: white;
+    background-color: black;
+    line-height: 5rem;
+    padding: 2rem;
+    border-radius: 2rem 0;
+    outline: 0.6rem inset yellow;
+    outline-offset: 1rem;
+    
+}
+.logo{
+    width: 70%;    
+}
+.heading-container-heading-way{
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    color: white;
+    background-color: black;
+    line-height: 5rem;
+    padding: 11px;
+    border-radius: 11.2px 0;
+    outline: 0.6rem inset yellow;
+    outline-offset: 0.19rem;
+}
+.heading-container-heading-team{
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    color: white;
+    background-color: black;
+    line-height: 5rem;
+    padding: 11px;
+    border-radius: 11.2px 0;
+    outline: 0.6rem inset yellow;
+    outline-offset: 0.19rem;
+    padding: 2rem;
+}
+p{text-align: justify;}
+.bold{
+    text-transform: ;
+}
