@@ -1,0 +1,51 @@
+/*? COMBINATORS */
+* {
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+
+/** Descendent Selector*/
+/*! box class'ı icerisinde tüm p'leri sec */
+.box p {
+  color: red;
+}
+
+/** Child Selector */
+/*! parent'i kutu class olan tüm p'leri seç */
+.box > p {
+  color: blue;
+}
+.box > h1 {
+  color: purple;
+}
+
+/** general sibling selector */
+/*? .box div'i kapandiktan sonraki tum p'leri secer.
+/*! NOT: Kapanan div ile ayni parent'a  sahip olan tum p'leri secer */
+.box ~ p {
+  color: green;
+}
+
+/*! box elementi kapandiktan sonraki ilk p elementi secer */
+.box + p {
+  color: fuchsia;
+}
+
+/*? p elementinden sonraki ilk h1 */
+p + h1 {
+  font-size: 1rem;
+  margin: 3rem;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid red;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3.3rem;
+}
+
+p + h1:hover {
+  outline: 3px dotted purple;
+  /* outline-style: double; */
+  outline-offset: 3px;
+  /* outline: none; */
+}

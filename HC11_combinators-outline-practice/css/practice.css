@@ -1,0 +1,132 @@
+/*? RESET */
+/*?-----------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  /*! HEADER  */
+  /*!-----------------------------------*/
+  header {
+    background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+    padding: 1rem;
+  }
+  
+  header a img {
+    width: 60px;
+  }
+  
+  header .sign-in {
+    float: right;
+    color: #920101;
+    padding-top: 1.7rem;
+    padding-right: 0.5rem;
+  }
+  
+  header .sign-in a {
+    color: #920101;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  header .sign-in a:hover {
+    border-bottom: 2px solid #920101;
+  }
+  
+  /*! NAV STICKY  */
+  /*!-----------------------------------*/
+  nav.sticky {
+    position: sticky;
+    top: 0rem;
+    padding: 2rem;
+    background-image: linear-gradient(45deg, #fbff00 0%, #000000 50%);
+    text-align: center;
+    z-index: 1;
+  }
+  
+  nav.sticky a {
+    font-family: "DynaPuff", cursive;
+    text-decoration: none;
+    color: yellow;
+    margin-right: 0.8rem;
+    /* letter-spacing: 1px; */
+  }
+  
+  nav.sticky a:hover {
+    color: white;
+  }
+  
+  /*! NAV BANNER  */
+  /*!-----------------------------------*/
+  
+  nav.banner {
+    position: relative;
+  }
+  
+  nav.banner img {
+    width: 100%;
+    max-height: calc(100vh - 204px);
+  }
+  
+  nav.banner .hero {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+  
+  nav.banner .hero h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 2px 4px black;
+  }
+  
+  nav.banner .hero h3 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: red;
+    text-shadow: 0px 2px 4px grey;
+  }
+  
+  nav.banner button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #d9afd9;
+    font-weight: 700;
+  }
+  nav.banner button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  main{
+    padding: 2rem;
+    text-align: justify;
+  }
+
+  section.slack{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 2rem;
+    color: white;
+    background-color: red;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0.16rem;
+}
+section.slack:hover{
+    cursor: pointer;
+    outline: 2px solid red;
+    outline-offset: 1rem;
+    background-color: pink;
+    color: red;
+  }

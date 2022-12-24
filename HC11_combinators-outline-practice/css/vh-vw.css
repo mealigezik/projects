@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+/* html {
+  height: 100%;
+} */
+
+body {
+  /* height: 100%; */
+  height: 100vh;
+}
+
+.div1 {
+  background-color: green;
+  width: 50%; /*? body'nin 50% si */
+  max-width: 600px;
+
+  /*? body'nin default bir yuksekligi olmadigi icin  buradaki 50% calismaz*/
+  height: 50%;
+}
+
+.div2 {
+  background-color: tomato;
+  width: 50%; /*? div1 'in 50% si */
+  /* height: 20vh; */
+}
+
+.div3 {
+  /* width: 50%; ? div2 'in 50% si*/
+  width: 50vw;
+  /*? vw birimi dogruda tarayicinin gorunebilir uzunluguna baglidir. Yani parent'a bagli degildir. */
+  background-color: magenta;
+  height: 30%;
+}
