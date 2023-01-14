@@ -1,0 +1,39 @@
+//*****************************************************
+//*   ABOUT PAGE
+//*****************************************************
+
+.about-bgImg-container{
+    @include bgImg(50vh, $main-bgImg-path);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    .about__bio-image{
+        text-align: center;
+
+        h2{
+            font-size: 3rem;
+            color: $secondary-color;
+        }
+
+        p{
+            font-size: 1.2rem;
+            margin: 2rem;
+            line-height: 1.5rem;
+        }
+    }
+
+}
+
+.about{
+    &__container{
+        border: 2px solid red;
+        width: 70vw;
+        margin: 2rem auto;
+    }
+
+    .about.job{
+        
+    }
+}

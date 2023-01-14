@@ -1,0 +1,20 @@
+//*****************************************************
+//*   Mixins
+//*****************************************************
+
+@mixin transition($sec){
+    transition: all $sec ;
+}
+
+@mixin bgImg($height, $url) {
+    height: $height;
+    width: 100%;
+    background:linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3),
+    ),
+    url($url) ;
+    background-position: center center;
+    background-size: cover;
+}
