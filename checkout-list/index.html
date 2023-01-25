@@ -4,96 +4,104 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Check List</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <h1>Check Out</h1>
-    <div class="container">
-      <div class="cards">
-        <div class="cardGen cards1">
-          <img src="./img/photo1.png" alt="" />
-          <div class="right">
-            <h5>Vintage Backbag</h5>
-            <p>
-              <span class="newPrice">$25.98</span
-              ><del class="oldPrice"> $34.77</del>
-            </p>
-            <div class="counter">
-              <span class="minus">-</span>
-              <span class="amount">4</span>
-              <span class="plus">+</span>
+    <h1>CHECKOUT</h1>
+    <div class="main">
+      <div class="container">
+        <div class="items">
+          <div class="item">
+            <img src="./img/photo1.png" alt="" />
+            <div class="elements">
+              <div>
+                <p>Gaming Pc</p>
+                <p>$ <b>1000</b> <del>$1250</del></p>
+              </div>
+              <div>
+                <div class="counter">
+                  <span class="minus">-</span>
+                  <span class="amount">3</span>
+                  <span class="plus">+</span>
+                </div>
+                <div>
+                  <button class="btn-remove">Remove</button>
+                </div>
+              </div>
+              <div>
+                <span>Product Total : $</span>
+                <span class="proTotal"> 1000</span>
+              </div>
             </div>
-            <div class="romeve">
-              <button>Remove</button>
+          </div>
+          <div class="item">
+            <img src="./img/photo2.png" alt="" />
+            <div class="elements">
+              <div>
+                <p>Monitor</p>
+                <p>$ <b>500</b> <del>$570</del></p>
+              </div>
+              <div>
+                <div class="counter">
+                  <span class="minus">-</span>
+                  <span class="amount">1</span>
+                  <span class="plus">+</span>
+                </div>
+                <div>
+                  <button class="btn-remove">Remove</button>
+                </div>
+              </div>
+              <div>
+                <span>Product Total : $</span>
+                <span class="proTotal">500</span>
+              </div>
             </div>
-            <div class="product-total">
-              <p><span>Product Total</span><span>$103.92</span></p>
+          </div>
+          <div class="item">
+            <img src="./img/photo3.jpg" alt="" />
+            <div class="elements">
+              <div>
+                <p>Gaming SET</p>
+                <p>$ <b>600</b> <del>$680</del></p>
+              </div>
+              <div>
+                <div class="counter">
+                  <span class="minus">-</span>
+                  <span class="amount">1</span>
+                  <span class="plus">+</span>
+                </div>
+                <div>
+                  <button class="btn-remove">Remove</button>
+                </div>
+              </div>
+              <div>
+                <span>Product Total : $</span>
+                <span class="proTotal">600</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="cardGen cards2">
-          <img src="./img/photo2.png" alt="" />
-          <div class="right">
-            <h5>Vintage Backbag</h5>
-            <p>
-              <span class="newPrice">$25.98</span
-              ><del class="oldPrice"> $34.77</del>
-            </p>
-            <div class="counter">
-              <span class="minus">-</span>
-              <span class="amount">4</span>
-              <span class="plus">+</span>
-            </div>
-            <div class="romeve">
-              <button>Remove</button>
-            </div>
-            <div class="product-total">
-              <p><span>Product Total</span><span>$103.92</span></p>
-            </div>
+        <div class="priceList">
+          <div class="end">
+            <span>Subtotal:</span>
+            <span class="stotal">$224.90</span>
           </div>
-        </div>
-        <div class="cardGen cards3">
-          <img src="./img/photo3.jpg" alt="" />
-          <div class="right">
-            <h5>Vintage Backbag</h5>
-            <p>
-              <span class="newPrice">$25.98</span
-              ><del class="oldPrice"> $34.77</del>
-            </p>
-            <div class="counter">
-              <span class="minus">-</span>
-              <span class="amount">4</span>
-              <span class="plus">+</span>
-            </div>
-            <div class="romeve">
-              <button>Remove</button>
-            </div>
-            <div class="product-total">
-              <p><span>Product Total</span><span>$103.92</span></p>
-            </div>
+          <div class="end">
+            <span>Tax("%18):</span>
+            <span class="tax">$224.90</span>
+          </div>
+          <div class="end">
+            <span>Shipping:</span>
+            <span class="ship">$10</span>
+          </div>
+          <div class="end">
+            <span>Total:</span>
+            <span class="all-total">$250.90</span>
           </div>
         </div>
       </div>
-      <div class="total"></div>
     </div>
-    <div class="line">
-      <span>Subtotal</span>
-      <span class="sub">$222.06</span>
-    </div>
-    <div class="line">
-      <span>Tax(%18)</span>
-      <span class="tax">$222.06</span>
-    </div>
-    <div class="line">
-      <span>Shipping</span>
-      <span class="shipping">$222.06</span>
-    </div>
-    <div class="line">
-      <span>Total</span>
-      <span class="total">$222.06</span>
-    </div>
-
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

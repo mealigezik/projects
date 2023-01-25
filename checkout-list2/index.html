@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Checkout</title>
+  </head>
+  <body>
+    <main>
+      <h1 id="checout-title">Checout Page</h1>
+      <div id="products-preview">
+        <div id="product-painel">
+          <div class="products">
+            <div class="product">
+              <img
+                src="./assets/photo1.png"
+                alt="Vintage
+                                Backbag"
+              />
+              <div class="product-info">
+                <div class="product-price">
+                  <h2>Vintage Backbag</h2>
+                  <p>
+                    <strong>25.98</strong>
+                    <span class="line-through">$34.99</span>
+                  </p>
+                </div>
+                <div class="quantity-controller">
+                  <i class="fa-solid fa-minus"></i>
+                  <p class="quantity">1</p>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="product-removal">
+                  <button class="remove-product">Remove</button>
+                </div>
+                <div class="product-line-price">
+                  Product Total:$
+                  <span class="price">25.98</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product">
+              <img src="./assets/photo2.png" alt="Levi Shoes" />
+              <div class="product-info">
+                <div class="product-price">
+                  <h2>Levi Shoes</h2>
+                  <p>
+                    <strong>45.99</strong>
+                    <span class="line-through">$54.99</span>
+                  </p>
+                </div>
+                <div class="quantity-controller">
+                  <i class="fa-solid fa-minus"></i>
+                  <p class="quantity">1</p>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="product-removal">
+                  <button class="remove-product">Remove</button>
+                </div>
+                <div class="product-line-price">
+                  Product Total:
+                  <span class="price">45.99</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product">
+              <img src="./assets/photo3.jpg" alt="Antique Clock" />
+              <div class="product-info">
+                <div class="product-price">
+                  <h2>Antique Clock</h2>
+                  <p>
+                    <strong>74.99</strong>
+                    <span class="line-through">$94.99</span>
+                  </p>
+                </div>
+                <div class="quantity-controller">
+                  <i class="fa-solid fa-minus"></i>
+                  <p class="quantity">1</p>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="product-removal">
+                  <button class="remove-product">Remove</button>
+                </div>
+                <div class="product-line-price">
+                  Product Total:
+                  <span class="price">74.99</span>
+                </div>
+              </div>
+            </div>
+            <div class="buy-detail" id="cart-subtotal">
+              <p>Subtotal</p>
+              <p id="subtotalCart">0</p>
+            </div>
+            <div class="buy-detail" id="cart-tax">
+              <p>Tax(%18)</p>
+              <p id="taxRateCart">0</p>
+            </div>
+            <div class="buy-detail" id="cart-shipping">
+              <p>Shipping</p>
+              <p id="shippingCart">0</p>
+            </div>
+            <div class="buy-detail" id="cart-total">
+              <p>Total</p>
+              <p id="totalCart">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
