@@ -26,7 +26,7 @@ body{
 border: 2px solid rgb(0, 0, 0);
 border-radius: 3rem;
 background-color: #000000b8;
-width: 45vw;
+min-width: 45vw;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -44,7 +44,7 @@ h1{
 
 #girdi{
    padding: 10px;
-   width:95%;
+   width:90%;
    text-align: center;
    border: none;
    color: white;
