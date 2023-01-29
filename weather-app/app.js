@@ -30,7 +30,7 @@ const displayResult = (result)=>{
     console.log(result)
 
     let city = document.querySelector('.sehir')
-    city.innerText=`${result.name} , ${result.sys.country}`
+    city.innerText=`${result.name}, ${result.sys.country}`
 
     let deg = document.querySelector('.derece')
     deg.innerText=`${Math.round(result.main.temp)}°c`

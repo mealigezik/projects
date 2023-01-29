@@ -1,107 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Archivo', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
 }
 
-body{
-    background-repeat: no-repeat;
-    background-size:cover;
-    min-height: 100vh;
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
-.css{
-    display: flex;
-    justify-content: center;
-    vertical-align: center;
+.css {
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  position: relative;
+  top: 18vh;
+}
+
+.container {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 3rem;
+  background-color: #000000b8;
+  min-width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 2rem;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  cursor: default;
+  color: white;
+}
+
+#girdi {
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+  border: none;
+  color: white;
+  background-color: #00000099;
+  border-radius: 40px;
+  border-bottom: 4px black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.output {
+  font-size: 3rem;
+  cursor: default;
+}
+
+.durum,
+.sehir,
+.derece,
+.time {
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sehir {
+  color: white;
+}
+
+.derece {
+  font-size: 120px;
+}
+
+.time {
+  font-size: 1.7rem;
+  color: white;
+}
+
+.durum {
+  display: inline;
+  font-size: 2.5rem;
+  color: white;
+}
+.dur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  display: inline;
+}
+
+.img img {
+  width: 6rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5rem;
+  margin-left: 11px;
+}
+
+@media screen and (max-width: 475px) {
+  .css {
     position: relative;
-    top: 18vh;
-}
-
-.container{
-border: 2px solid rgb(0, 0, 0);
-border-radius: 3rem;
-background-color: #000000b8;
-min-width: 45vw;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-position: relative;
-padding: 2rem;
-}
-h1{
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 800;
-    cursor: default;
-    color: white;
-}
-
-#girdi{
-   padding: 10px;
-   width:90%;
-   text-align: center;
-   border: none;
-   color: white;
-   background-color: #00000099;
-   border-radius: 40px;
-   border-bottom: 4px black;
-   margin-top: 15px;
-   margin-bottom: 15px;
-   font-size: 20px;
-   outline: none;
-   cursor: pointer;
-   text-transform: uppercase;
-}
-
-.output{
-    font-size: 3rem;
-    cursor: default;
-    
-
-}
-
-.durum,.sehir,.derece,.time{
+    top: 1vh;
+  }
+  .container {
+    height: 90vh;
+  }
+  .durum,
+  .sehir,
+  .derece,
+  .time {
     text-transform: capitalize;
-    padding-bottom: 20px;
+    padding-bottom: 0.1em;
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .derece {
+    font-size: 5rem;
+  }
 }
-
-.sehir{
-    color: white;
+@media screen and (max-width: 1360px) {
+  .container {
+    width: 62vw;
+  }
 }
-
-.derece{
-    font-size: 120px;
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 65vw;
+  }
 }
-
-.time{
-    font-size:1.7rem ;
-    color: white;
-}
-
-.durum{
-    display: inline;
-    font-size: 2.5rem;
-    color: white;
-}
-.dur{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.img{
-    display: inline;
-}
-
-.img img{
-    width: 5rem;
+@media screen and (max-width: 720px) {
+  .container {
+    width: 75vw;
+  }
 }
