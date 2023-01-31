@@ -165,3 +165,10 @@ i:hover{
     color: #fee392;
     margin-left:1rem;
 }
+#copy{
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.17);
+    text-align: center;
+    margin: 0 4rem;
+    border-radius: 0.5rem;
+}
