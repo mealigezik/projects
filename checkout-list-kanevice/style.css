@@ -10,7 +10,7 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background: #f05dda;
     /* background: linear-gradient(#091921, #9d7704,  #091921); */
 }
@@ -21,7 +21,7 @@ body::before{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#e91e63, rgb(241, 248, 247), #ffc107);
+    background: linear-gradient(#ff3ddf, rgb(241, 248, 247), #ffc107);
     clip-path: circle(20% at 15% 15%);
 }
 body::after{
