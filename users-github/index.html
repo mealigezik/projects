@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Github User Search</title>
+</head>
+
+<body>
+
+
+
+  <!-- search container -->
+  <div class="container shadow  p-5 mt-5">
+    <h1 class="display-3 text-center mb-5 ">Github Search User</h1>
+
+
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+
+        <div class="input-group">
+          <input class="form-control border-end-0 border rounded-pill" type="search" value="" id="example-search-input">
+          <span class="input-group-append">
+            <button
+              class="btn text-white  px-4 ms-3 btn-outline-secondary bg-primary border-bottom-0 border rounded-pill ms-n5"
+              type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- user -->
+  <div class="container mt-5 border border-2 user d-flex justify-content-center">
+
+
+    <div class="card" style="width: 24rem;">
+      <img src="https://avatars.githubusercontent.com/u/1?v=4" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title text-center">User name</h3>
+        <div class="row my-4">
+          <div class="col-4">
+            <h5>repos</h5>
+            <p>1254</p>
+            </div>
+          <div class="col-4">
+            <h5>followers</h5>
+            <p>1254</p>
+            </div>
+          <div class="col-4">
+            <h5>following</h5>
+            <p>1254</p>
+            </div>
+          
+        </div>
+
+        <div class="text-center">
+
+          <a href="#" class="btn btn-primary">Github Profile</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- followers -->
+
+  <div class="container mt-5 border border-2 followers d-flex gap-4 ">
+    <div class="card" style="width: 18rem;">
+      <img src="https://avatars.githubusercontent.com/u/1?v=4" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="https://avatars.githubusercontent.com/u/1?v=4" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
