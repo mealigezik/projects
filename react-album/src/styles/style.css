@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  background-color: rgba(0, 0, 0);
+}
+h1 {
+  text-align: center;
+  color: black;
+  background-color: yellow;
+  padding: 1rem;
+}
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.pictures-in {
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 400px;
+  
+}
+.main-pic {
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 60vh;
+}
+.main-pic:hover{
+    box-shadow: rgba(250, 250, 255, 0.25) 0px 50px 100px -20px, rgba(243, 238, 238, 0.3) 0px 30px 60px -30px, rgba(189, 20, 121, 0.35) 0px -2px 6px 0px inset;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+img:hover {
+  transform: scale(1.25);
+
+}
+.info {
+  padding: 0.5rem;
+  text-align: center;
+}
+p {
+  color: yellow;
+  font-size: 1.5rem;
+}
+h4{
+    color: yellow;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: right;
+}
