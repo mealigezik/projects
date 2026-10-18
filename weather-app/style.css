@@ -146,3 +146,19 @@ h1 {
     width: 75vw;
   }
 }
+
+
+/* Improved keyboard and request-status readability */
+.status {
+  width: min(90%, 32rem);
+  margin: 0.5rem auto;
+  min-height: 1.5em;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#girdi:focus-visible {
+  outline: 3px solid #ffd573;
+  outline-offset: 3px;
+}
