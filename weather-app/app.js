@@ -1,5 +1,5 @@
 const API_BASE_URL = "https://api.openweathermap.org/data/2.5/";
-const API_KEY = ""; // Configure locally; never commit API keys.
+const API_KEY = ""; // Add locally for testing; never commit a real key.
 
 const input = document.querySelector("#girdi");
 const cityNode = document.querySelector(".sehir");
@@ -20,29 +20,22 @@ const getResult = async (cityName) => {
     return;
   }
   if (!API_KEY) {
-    setStatus("Hava durumu API anahtarı yapılandırılmamış.");
+    setStatus("API anahtarı yapılandırılmamış. Güvenli bir sunucu endpoint'i kullanın.");
     return;
   }
 
   setStatus("Yükleniyor...");
   try {
-    const query = new URLSearchParams({
-      q: city,
-      appid: API_KEY,
-      units: "metric",
-      lang: "tr",
-    });
+    const query = new URLSearchParams({ q: city, appid: API_KEY, units: "metric", lang: "tr" });
     const response = await fetch(`${API_BASE_URL}weather?${query}`);
     if (!response.ok) {
       throw new Error(response.status === 404 ? "Şehir bulunamadı." : "Hava durumu alınamadı.");
     }
-
     const result = await response.json();
     cityNode.textContent = `${result.name}, ${result.sys.country}`;
     temperatureNode.textContent = `${Math.round(result.main.temp)}°C`;
     conditionNode.textContent = result.weather?.[0]?.description ?? "";
     iconNode.replaceChildren();
-
     const icon = result.weather?.[0]?.icon;
     if (icon) {
       const image = document.createElement("img");
@@ -50,10 +43,7 @@ const getResult = async (cityName) => {
       image.alt = result.weather?.[0]?.description ?? "Hava durumu simgesi";
       iconNode.appendChild(image);
     }
-
-    dateNode.textContent = new Intl.DateTimeFormat("tr-TR", {
-      dateStyle: "medium",
-    }).format(new Date());
+    dateNode.textContent = new Intl.DateTimeFormat("tr-TR", { dateStyle: "medium" }).format(new Date());
     setStatus("");
   } catch (error) {
     setStatus(error instanceof Error ? error.message : "Beklenmeyen bir hata oluştu.");
