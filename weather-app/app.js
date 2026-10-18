@@ -1,77 +1,65 @@
-let url = 'https://api.openweathermap.org/data/2.5/'
-let key = 'e38336df8ed6ab9f4ba2f79bd7a0a104'
+const API_BASE_URL = "https://api.openweathermap.org/data/2.5/";
+const API_KEY = ""; // Configure locally; never commit API keys.
 
+const input = document.querySelector("#girdi");
+const cityNode = document.querySelector(".sehir");
+const temperatureNode = document.querySelector(".derece");
+const conditionNode = document.querySelector(".durum");
+const iconNode = document.querySelector(".img");
+const dateNode = document.querySelector(".time");
+const statusNode = document.querySelector(".status");
 
+const setStatus = (message) => {
+  if (statusNode) statusNode.textContent = message;
+};
 
+const getResult = async (cityName) => {
+  const city = cityName.trim();
+  if (!city) {
+    setStatus("Lütfen bir şehir adı girin.");
+    return;
+  }
+  if (!API_KEY) {
+    setStatus("Hava durumu API anahtarı yapılandırılmamış.");
+    return;
+  }
 
-const setQuery=(e)=>{
-    if(e.keyCode =='13')
-    getResult(sehir.value)
-}
-
-let sehir = document.querySelector('#girdi')
-sehir.addEventListener('keypress' , setQuery)
-
-
-const getResult = (sehirIsmi)=>{
-    let query =`${url}weather?q=${sehirIsmi}&appid=${key}&units=metric&lang=tr`
-    console.log(query);
-    
-    let x = "url('https://source.unsplash.com/1920x1080/?" + sehirIsmi +"')"
-    document.body.style.backgroundImage = x
-    fetch(query)
-    .then(weather =>{
-        return weather.json()
-    })
-    .then(displayResult)
-}
-
-const displayResult = (result)=>{
-    console.log(result)
-
-    let city = document.querySelector('.sehir')
-    city.innerText=`${result.name}, ${result.sys.country}`
-
-    let deg = document.querySelector('.derece')
-    deg.innerText=`${Math.round(result.main.temp)}°c`
-
-   
-
-    if(`${Math.round(result.main.temp)}`>23){
-        document.body.children[0].children[0].children[1].children[1].style.color = "#FE7701"
-    }  if(`${Math.round(result.main.temp)}`<21){
-        document.body.children[0].children[0].children[1].children[1].style.color = "#FFD573"
-    }  if(`${Math.round(result.main.temp)}`<11){
-        document.body.children[0].children[0].children[1].children[1].style.color = "#95D9F2"
-    }  if(`${Math.round(result.main.temp)}`<1){
-        document.body.children[0].children[0].children[1].children[1].style.color = "#3BAFE5"
+  setStatus("Yükleniyor...");
+  try {
+    const query = new URLSearchParams({
+      q: city,
+      appid: API_KEY,
+      units: "metric",
+      lang: "tr",
+    });
+    const response = await fetch(`${API_BASE_URL}weather?${query}`);
+    if (!response.ok) {
+      throw new Error(response.status === 404 ? "Şehir bulunamadı." : "Hava durumu alınamadı.");
     }
 
-    let durum = document.querySelector('.durum')
-    durum.innerText=`${result.weather[0].description} `
- 
-    let img = document.querySelector('.img')
-    const icon = result.weather[0].icon;
-    img.innerHTML=`<img src= http://openweathermap.org/img/w/${icon}.png  />`
+    const result = await response.json();
+    cityNode.textContent = `${result.name}, ${result.sys.country}`;
+    temperatureNode.textContent = `${Math.round(result.main.temp)}°C`;
+    conditionNode.textContent = result.weather?.[0]?.description ?? "";
+    iconNode.replaceChildren();
 
+    const icon = result.weather?.[0]?.icon;
+    if (icon) {
+      const image = document.createElement("img");
+      image.src = `https://openweathermap.org/img/wn/${encodeURIComponent(icon)}.png`;
+      image.alt = result.weather?.[0]?.description ?? "Hava durumu simgesi";
+      iconNode.appendChild(image);
+    }
 
-    let objectDate = new Date();
-    let day = objectDate.getDate();
-    console.log(day); // 23
-    let month = objectDate.getMonth();
-    console.log(month + 1); // 8
-    let year = objectDate.getFullYear();
-    console.log(year); // 2022
-    
-    let zaman = document.querySelector('.time')
-    zaman.innerText=`${day}/${month+1}/${year}`
+    dateNode.textContent = new Intl.DateTimeFormat("tr-TR", {
+      dateStyle: "medium",
+    }).format(new Date());
+    setStatus("");
+  } catch (error) {
+    setStatus(error instanceof Error ? error.message : "Beklenmeyen bir hata oluştu.");
+  }
+};
 
-
-    
-}
-
-
-
-
-
-
+input?.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") getResult(input.value);
+});
